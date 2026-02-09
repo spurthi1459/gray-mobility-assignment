@@ -1,0 +1,14 @@
+{
+  "generation_date": "2026-02-10 03:12:31.780127",
+  "duration_minutes": 30,
+  "sampling_rate_hz": 1,
+  "num_patients": 6,
+  "total_records": 10800,
+  "scenarios": {
+    "acute_arrhythmia": 1800,
+    "acute_cardiac": 1800,
+    "deterioration_respiratory": 1800,
+    "deterioration_shock": 1800,
+    "normal_transport": 3600
+  }
+}
