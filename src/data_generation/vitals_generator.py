@@ -375,12 +375,12 @@ if __name__ == "__main__":
     
     # Save to CSV
     all_data.to_csv('ambulance_vitals_data.csv', index=False)
-    print(f"\n✓ Saved combined data: {len(all_data)} records")
+    print(f"\n Saved combined data: {len(all_data)} records")
     
     # Save individual patient files
     for i, df in enumerate(individual_patients, 1):
         df.to_csv(f'patient_{i}_vitals.csv', index=False)
-        print(f"✓ Saved patient {i}: {df['scenario'].iloc[0]}")
+        print(f" Saved patient {i}: {df['scenario'].iloc[0]}")
     
     # Generate summary statistics
     print("\n" + "=" * 60)

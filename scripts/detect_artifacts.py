@@ -1,6 +1,6 @@
 """
 Run artifact detection on generated data
-Run: python scripts\detect_artifacts.py
+
 """
 
 import sys
@@ -23,7 +23,7 @@ def main():
     print("\nLoading data...")
     df = pd.read_csv('data/raw/ambulance_vitals_data.csv')
     df['timestamp'] = pd.to_datetime(df['timestamp'])
-    print(f"✓ Loaded {len(df)} records")
+    print(f" Loaded {len(df)} records")
     
     # Initialize detector
     detector = ArtifactDetector(sampling_rate=1)
@@ -86,15 +86,12 @@ def main():
         )
     
     print("\n" + "=" * 60)
-    print("✓ ARTIFACT DETECTION COMPLETE!")
+    print("ARTIFACT DETECTION COMPLETE!")
     print("=" * 60)
     print("\nGenerated files:")
     print("  - data/processed/cleaned_vitals.csv")
     print("  - plots/artifact_detection/*.png")
-    print("\nNext steps:")
-    print("  1. Review artifact detection plots")
-    print("  2. Verify cleaning quality")
-    print("  3. Move to Part 2: Anomaly Detection")
+   
 
 if __name__ == "__main__":
     main()

@@ -1,6 +1,6 @@
 """
 Verify artifact detection quality
-Run: python scripts\verify_cleaning.py
+
 """
 
 import sys
@@ -65,9 +65,9 @@ def verify_cleaning():
         print(f"     Difference: {hr_diff:.1f} bpm (should be small)")
         
         if hr_diff > 5:
-            print(f"     ⚠ Warning: Large change in mean HR - check if medical signal preserved")
+            print(f"     Warning: Large change in mean HR - check if medical signal preserved")
         else:
-            print(f"     ✓ Medical signal preserved")
+            print(f"     Medical signal preserved")
     
     print("\n" + "=" * 60)
     print("✓ VERIFICATION COMPLETE")
@@ -102,7 +102,7 @@ def verify_cleaning():
     
     plt.tight_layout()
     plt.savefig('plots/artifact_detection/cleaning_verification.png', dpi=150)
-    print("✓ Saved: plots/artifact_detection/cleaning_verification.png")
+    print(" Saved: plots/artifact_detection/cleaning_verification.png")
     plt.show()
     
     return True
